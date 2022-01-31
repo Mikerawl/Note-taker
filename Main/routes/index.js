@@ -3,6 +3,6 @@ const router = express.Router();
 
 
 // Renders the HTML index page.
-router.get('/', (req, res) => res.send('Navigate to /send or /routes'));
+router.get('/', (req, res) => {res.render("index")})
 
 module.exports=router
