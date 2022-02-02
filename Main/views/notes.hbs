@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 list-container">
+      <div class="card">
+        <ul class="list-group">
+          {{#each notes as |note|}}
+          <li class="note-item">
+            <a href="notes/{{note.id}}">{{note.title}}</a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="col-8">
+      <input class="note-title" placeholder="Note Title" maxlength="28" type="text" />
+      <textarea class="note-textarea" placeholder="Note Text"></textarea>
+    </div>
+  </div>
+</div>
