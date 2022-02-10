@@ -34,8 +34,8 @@ app.use(
 )
 
 // Creates routes
-const indexRouter = require('./routes/index')
-const notesRouter = require('./routes/notes')
+const indexRouter = require('./Main/routes/index')
+const notesRouter = require('./Main/routes/notes')
 
 app.use("/", indexRouter);
 app.use("/notes", notesRouter);
