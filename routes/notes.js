@@ -1,5 +1,4 @@
-const { json } = require('body-parser');
-const e = require('express');
+// const { json } = require('body-parser');
 const express = require('express');
 const router = express.Router();
 const fs = require("fs");
@@ -19,14 +18,14 @@ router.get('/', (req, res) => {
     res.render('notes', {notes})
 })
 
-router.post('/', async (req, res) => {
+router.post('/', (req, res) => {
    const {title, note} = req.body;
 
    if (req.body) {
        const newNote = {title, note, id:uuidv4()}
-    await readAndAppend(newNote, "./db/notes.json")
+    readAndAppend(newNote, "./db/notes.json")
     res.redirect("notes")
-    }else {
+    } else {
         res.err("error in add")
     }    
 })
