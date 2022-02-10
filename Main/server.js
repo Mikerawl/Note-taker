@@ -7,7 +7,7 @@ const methodOverride = require ("method-override");
 
 const app = express();
 // Assigns the port
-const PORT = process.env.port || 3002;
+const PORT = process.env.port || 3001;
 
 // Allowsexpress to get data from forms
 app.use(bodyParser.urlencoded({extended:true}));
@@ -41,7 +41,7 @@ app.use("/", indexRouter);
 app.use("/notes", notesRouter);
 
 // Start the server on the port
-  app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`));
+  app.listen(PORT, () => console.log(`Example app ${PORT}`));
 
 
 
